@@ -1,0 +1,1 @@
+<p>Writing in a file synchronously without any callback</p>
