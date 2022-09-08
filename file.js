@@ -17,7 +17,9 @@ const e = require("cors");
 
 const server = http.createServer((req, res) => {
   if (req.url == "/") {
-    // writing in a file asynchronous way
+    //
+
+    // writing in a file asynchronous way || there will be no "data" in callback
     fs.writeFile("data.txt", "<p>Writing in a file Asynchronously with a callback</p>", (err) => {
       if (err) {
         console.log(err);
@@ -35,10 +37,10 @@ const server = http.createServer((req, res) => {
       }
     });
 
-    // writing in a file Synchronous way
+    // writing in a file Synchronous way || there is no callback in synchronous
     fs.writeFileSync("data-2.txt", "<p>Writing in a file synchronously without any callback</p>");
 
-    // reading in file Synchronous way
+    // reading in file Synchronous way || there is no callback in synchronous
     const synchr_file = fs.readFileSync("data-2.txt");
     res.write(synchr_file);
 
