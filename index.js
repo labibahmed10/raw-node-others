@@ -1,6 +1,11 @@
 const http = require("http");
 const url = require("url");
 
+module.exports = {
+  http,
+  url,
+};
+
 // basic node server
 const server = http.createServer(function (req, res) {
   res.writeHead(200, { "content-type": "text/html" });
@@ -28,21 +33,6 @@ const server3 = http.createServer(function (req, res) {
   // giving "true" after url is obvious
   console.log(url.parse(demo, true));
   res.end();
-
-  // Url {
-  //   protocol: 'http:',
-  //   slashes: true,
-  //   auth: null,
-  //   host: 'localhost:5000',
-  //   port: '5000',
-  //   hostname: 'localhost',
-  //   hash: null,
-  //   search: '?what=you&so=nothing',
-  //   query: [Object: null prototype] { what: 'you', so: 'nothing' },
-  //   pathname: '/comment',
-  //   path: '/comment?what=you&so=nothing',
-  //   href: 'http://localhost:5000/comment?what=you&so=nothing'
-  // }
 });
 
-server3.listen(5000);
+// server3.listen(5000);
