@@ -1,9 +1,9 @@
-const http = require("http");
-const url = require("url");
-
+const add = (a, b) => {
+  const result = a + b;
+  return result;
+};
 
 // exproting module from here as an object
 module.exports = {
-  http,
-  url,
+  add,
 };

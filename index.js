@@ -1,11 +1,6 @@
 const http = require("http");
 const url = require("url");
 
-module.exports = {
-  http,
-  url,
-};
-
 // basic node server
 const server = http.createServer(function (req, res) {
   res.writeHead(200, { "content-type": "text/html" });
@@ -35,4 +30,4 @@ const server3 = http.createServer(function (req, res) {
   res.end();
 });
 
-// server3.listen(5000);
+// server.listen(5000);
