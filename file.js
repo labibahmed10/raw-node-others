@@ -20,10 +20,15 @@ const server = http.createServer((req, res) => {
     //
 
     // writing in a file asynchronous way || there will be no "data" in callback
-    fs.writeFile("data.txt", "<p>Writing in a file Asynchronously with a callback</p>", (err) => {
+    fs.writeFile("data.txt", "<p></p>Writing in a file Asynchronously with a callback</p>", (err) => {
       if (err) {
         console.log(err);
       }
+    });
+
+    // appending a new line to the same file asynchronously
+    fs.appendFile("data.txt", "<p>Appending into data file aynchronously</p>", (err) => {
+      console.log(err);
     });
 
     // reading in file asynchronous way
@@ -39,6 +44,9 @@ const server = http.createServer((req, res) => {
 
     // writing in a file Synchronous way || there is no callback in synchronous
     fs.writeFileSync("data-2.txt", "<p>Writing in a file synchronously without any callback</p>");
+
+    // appending a new line to the same file Synchronously
+    fs.appendFileSync("data-2.txt", "<p>Appending into data - 2 file Snchronously</p>");
 
     // reading in file Synchronous way || there is no callback in synchronous
     const synchr_file = fs.readFileSync("data-2.txt");

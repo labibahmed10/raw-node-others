@@ -1,1 +1,1 @@
-<p>Writing in a file synchronously without any callback</p>
+<p>Writing in a file synchronously without any callback</p><p>Appending into data - 2 file Snchronously</p>
