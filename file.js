@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
-const e = require("cors");
+// const e = require("cors");
+
+
 
 // we have to create a server here and to the function from module js, we have to create a server listen and "nodemon thisFile.js" otherwise it won't work.
 
